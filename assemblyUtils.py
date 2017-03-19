@@ -71,12 +71,12 @@ if options.stats == True:
 	outfile.write(string)
 
 if options.split == True:
-	outfile	= open(options.output + '.fasta', 'w')
+	outfile	= open(options.output + 'splitContigs.fasta', 'w')
 	for key, value in fastafile.contigs.iteritems():
 		string	= key + "\n" + ''.join(fastafile.contigs[key])
 		outfile.write(string)
 
-outfile	= open(options.output + '.listmatch.fasta', 'w')
+outfile	= open(options.output + '.listMatch.fasta', 'w')
 if options.contiglist:
 	contiglist	= bioFunctions.ListCompare(options.contiglist)
 	if options.negative == True:

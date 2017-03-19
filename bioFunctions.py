@@ -61,11 +61,13 @@ class FastaManipulator(object):
 			self.total	+= int(self.lengths[i][1])
 		half	= int(self.total / 2)
 		tracker	= 0
+		count	= 0
 		for i in reversed(range(0,len(self.lengths))):
 			tracker += self.lengths[i][1]
+			count 	+= 1
 			if tracker >= half and self.nf == 0:
 				self.nf	= str(self.lengths[i][1])
-				self.lf	= str(i)
+				self.lf	= str(count)
 		self.max	= str(self.lengths[-1][1])
 
 class ListCompare(object):
