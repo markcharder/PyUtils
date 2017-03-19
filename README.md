@@ -49,33 +49,33 @@ There are several commands that can be used with assemblyUtils. These include:
 To run the following examples, stay in the PyUtils directory and type the commands.
 To split a fasta file into contigs based on where 'N' or 'n' characters occur:
 
-	assemblyUtils -f test/test.fasta -s -o test/test
+	assemblyUtils -f example/example.fasta -s -o example/example
 
-This will create a file called 'test.splitContigs.fasta' in the 'test' directory.
+This will create a file called 'example.splitContigs.fasta' in the 'example' directory.
 
 To get assembly stats without splitting:
 
-	assemblyUtils -f test/test.fasta -a -o test/test
+	assemblyUtils -f example/example.fasta -a -o example/example
 
-This will create a file called 'test.txt' in the 'test' directory, which contains assembly stats for the given fasta file, 
+This will create a file called 'example.txt' in the 'example' directory, which contains assembly stats for the given fasta file, 
 without first splitting it into separate contigs based on 'N's or 'n's.
 
 To get assembly stats with splitting:
 
-	assemblyUtils -f test/test.fasta -s -a -o test/test
+	assemblyUtils -f example/example.fasta -s -a -o example/example
 
-This will create two output files, 'test.splitContigs.fasta' and 'test.txt', in the 'test' directory.
-The file 'test.txt' contains stats based on 'test.splitContigs.fasta'.
+This will create two output files, 'example.splitContigs.fasta' and 'example.txt', in the 'example' directory.
+The file 'example.txt' contains stats based on 'example.splitContigs.fasta'.
 
 To filter a fasta file based on a list of sequences in a file:
 
-	assemblyUtils -f test/test.fasta -l test/list.txt -o test/test
+	assemblyUtils -f example/example.fasta -l example/list.txt -o example/example
 
-This will create a file called 'test.listMatch.fasta' in the 'test' directory. This is a fasta file containing only contigs that match the list.
+This will create a file called 'example.listMatch.fasta' in the 'example' directory. This is a fasta file containing only contigs that match the list.
 
 To negatively filter a fasta file based on a list of sequences in a file:
 
-	assemblyUtils -f test/test.fasta -l test/list.txt -v -o test/test
+	assemblyUtils -f example/example.fasta -l example/list.txt -v -o example/example
 
 This will do the same as the previous example, except the fasta file will contain only sequences that do not match the list.
 
